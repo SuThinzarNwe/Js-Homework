@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marital Status</title>
+</head>
+<body>
+    <p>Marital Status</p>
+
+    <input type="radio"  id="single" value="Single">Single <br>
+    <input type="radio"  id="married" value="Married">Married <br>
+    <input type="radio"  id="notshare" value="Do not Share">Do not Share <br><br>
+
+    <button type="button" onclick=" checkButton()"> Submit </button> 
+    <h3 id="disp" style= "color:green"> </h3>
+    <h4 id="error" style= "color:red"> </h4>
+
+</body>
+
+        <script>
+           function checkButton() {  
+            if(document.getElementById('single').checked) { 
+                document.getElementById("disp").innerHTML 
+                    = document.getElementById("single").value 
+                    + " radio button is checked"; 
+            } 
+            else if(document.getElementById('married').checked) { 
+                document.getElementById("disp").innerHTML 
+                    = document.getElementById("married").value 
+                    + " radio button is checked";   
+            } 
+            else if(document.getElementById('notshare').checked) { 
+                document.getElementById("disp").innerHTML 
+                    = document.getElementById("notshare").value 
+                    + " radio button is checked";   
+            } 
+            else { 
+                document.getElementById("error").innerHTML 
+                    = "You have not selected any season"; 
+            } 
+            } 
+
+        </script>
+
+</html>
